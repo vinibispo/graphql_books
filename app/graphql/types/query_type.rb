@@ -24,7 +24,7 @@ module Types
     field :books, [Books::Schema, {null: false}], description: "Fetches a list of books"
 
     def books
-      []
+      Book.all
     end
   end
 end
