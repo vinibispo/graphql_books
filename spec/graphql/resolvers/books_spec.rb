@@ -16,7 +16,7 @@ RSpec.describe "POST /graphql books" do
 
       result = graphql!(query_string:)
 
-      p result.to_h
+      expect(result['data']['books']).to be_an(Array)
     end
   end
 end
